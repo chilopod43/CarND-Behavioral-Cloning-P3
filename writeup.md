@@ -120,15 +120,13 @@ The Nvidia model consisted of the following layers:
 | RELU					|												|
 | Convolution 5x5     	| 2x2 stride, same padding, outputs 3x35x64 	|
 | RELU					|												|
-| Convolution 5x5     	| 2x2 stride, same padding, outputs 3x35x64 	|
+| Convolution 5x5     	| 2x2 stride, same padding, outputs 1x33x64 	|
 | RELU					|												|
 | Flatten				| outputs 2112									|
 | Fully connected		| outputs 100 									|
 | Fully connected		| outputs 50 									|
 | Fully connected		| outputs 10 									|
 | Fully connected		| outputs 1 									|
-
-[1] End-to-End Deep Learning for Self-Driving Cars: https://devblogs.nvidia.com/deep-learning-self-driving-cars/
 
 
 #### 3. Creation of the Training Set & Training Process
