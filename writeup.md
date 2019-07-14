@@ -17,13 +17,13 @@ The goals / steps of this project are the following:
 
 [image1]: ./wupimgs/loss_naive.png "Error Loss (Naive)"
 [image2]: ./wupimgs/loss_proposed.png "Error Loss (Proposed)"
-[image3]: ./wupimgs/center.png "Center Image"
-[image4]: ./wupimgs/reverse.png "Reverse Image"
-[image5]: ./wupimgs/recover_1st.png "Recovery 1st Image"
-[image6]: ./wupimgs/recover_2nd.png "Recovery 2nd Image"
-[image7]: ./wupimgs/recover_3rd.png "Recovery 3rd Image"
-[image8]: ./wupimgs/normal.png "Normal Image"
-[image9]: ./wupimgs/flipped.png "Flipped Image"
+[image3]: ./wupimgs/center.jpg "Center Image"
+[image4]: ./wupimgs/reverse.jpg "Reverse Image"
+[image5]: ./wupimgs/recover_1st.jpg "Recovery 1st Image"
+[image6]: ./wupimgs/recover_2nd.jpg "Recovery 2nd Image"
+[image7]: ./wupimgs/recover_3rd.jpg "Recovery 3rd Image"
+[image8]: ./wupimgs/normal.jpg "Normal Image"
+[image9]: ./wupimgs/flipped.jpg "Flipped Image"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -97,6 +97,9 @@ angle data at the track edge just before recovery.
 
 To reduce overfitting, I added a DropOut layer to the model and reduced the number of epochs from 15 to 5.
 This prevented the car from falling off the truck.
+The improved mean squared error is shown below.
+
+![alt text][image2]
 
 
 #### 2. Final Model Architecture
@@ -131,25 +134,25 @@ The Nvidia model consisted of the following layers:
 #### 3. Creation of the Training Set & Training Process
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+![alt text][image3]
 
 Second, I recorded one laps on the reverse track one center lane driving. Here is an example image of center lane reverse driving:
 
-![alt text][image3]
+![alt text][image4]
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn 
 to correct the course when the vehicle deviates from the center. These images show the course correction from the edge of the track to the center.
 
-![alt text][image4]
 ![alt text][image5]
 ![alt text][image6]
+![alt text][image7]
 
 There are many left corner images because the track one is a round course. 
 Therefore, the images are flipped to increase the data in the right corner. 
 For example, here is an image that has then been flipped:
 
-![alt text][image6]
-![alt text][image7]
+![alt text][image8]
+![alt text][image9]
 
 After the collection process, I had X number of data points. I then preprocessed this data by using images of 3 camera:
 left camera, center camera, right camera. 
